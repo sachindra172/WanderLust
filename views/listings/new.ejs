@@ -1,0 +1,96 @@
+<% layout("layouts/boilerplate") %>
+<div class="row mt-3">
+<div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+    <form method="POST" action="/listings"
+     novalidate class="needs-validation"
+     enctype="multipart/form-data" >
+      
+      <div class="mb-3">
+      <label="title" class="form-label">Title</label>
+      <input name="listing[title]"
+       placeholder="Enter Title"
+        type="text" 
+       class="form-control"
+       required
+       />
+
+      
+
+
+       <div class="valid-feedback">Title Looks Good</div>
+      </div >
+      <div class="mb-3">
+        <label="description" class="form-label">Description</label>
+        <textarea
+        name="listing[description]"
+        class="form-control"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Please enter a short description</div>
+      </div>
+      
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input
+        name="listing[imageUrl]"
+        type="file"
+        class="form-control"/>
+        required
+      </div>
+
+     <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price " class="form-label">Price</label>
+        <input name="listing[price]" placeholder="12000"   class="form-control" required />
+        <div class="invalid-feedback">Price should be valid</div>
+      </div>
+     
+      
+      <div class="mb-3 col-md-8">
+        <label for ="country " class="form-label">Country</label>
+        <input name="listing[country]" placeholder="India" type="text" class="form-control " required />
+        <div class="invalid-feedback">Country should be valid</div>
+      </div>
+     </div>
+      
+    
+      <div class="mb-3 ">
+        <label for="location" class="form-label">Location</label>
+        <input
+        name="listing[location]"
+        placeholder="Lucknow"
+        type="text"
+      class="form-control"
+      required
+      />
+      <div class="invalid-feedback">Location should be valid</div>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select name="listing[category]" id="category" class="form-control" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="trending">Trending</option>
+          <option value="iconiccities">Iconic Cities</option>
+          <option value="mountains">Mountains</option>
+          <option value="beach">Beach</option>
+          <option value="castle">Castle</option>
+          <option value="lakefront">Lakefront</option>
+          <option value="luxe">Luxe</option>
+          <option value="dome">Dome</option>
+          <option value="cabins">Cabins</option>
+          <option value="camping">Camping</option>
+          <option value="farms">Farms</option>
+        </select>
+        <div class="invalid-feedback">Please select a category</div>
+      </div>
+
+      <button class="btn btn-dark add-button mt-3">Add</button>
+      <br></br>
+    </form>
+  </div>
+  </div>
+
+ 
+
+  
